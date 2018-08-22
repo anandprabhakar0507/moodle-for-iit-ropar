@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Sign up</title>
+		<script src="js/jquery.min.js"></script>
+
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+		<script src="formvaliadator.js"></script>
+		<style>
+			option {
+			background: #5E5550;
+			}
+			select:active, select:hover {
+				outline-color: red
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<h1>Moodle</h1>
+				<div class="header-bottom">
+					<div class="header-right w3agile">				
+						<div class="header-left-bottom agileinfo">
+							<form id="form_sign_up" name="form_sign_up">
+								<input type="text"  placeholder="User name" id="username" class = "username_text" name="username" autocomplete="off"/>
+								<div class="error" id="username_error"></div>
+								<input type="text"  placeholder="First name" id="firstname" class = "username_text" name="firstname" autocomplete="off"/>
+								<div class="error" id="firstname_error"></div>
+								<input type="text"  placeholder="Last name" id="lastname" class = "username_text" name="lastname" autocomplete="off"/>
+								<div class="error" id="lastname_error"></div>
+								<input type="email" placeholder="Email address" id="email" class = "username_text" name="email" autocomplete="off"/>
+								<div class="error" id="email_error"></div>
+								<input type="text"  placeholder="Phone number" id="phone_number" class = "username_text" name="phone_number" autocomplete="off"/>
+								<div class="error" id="phone_number_error"></div>
+								<select name="department" id="department" class="username_text">
+									<option value="Computer Science" id="atext" selected>Computer Science</option>
+									<option value="Electrical Engineering" id="atext">Electrical Engineering</option>
+									<option value="Mechanical Engineering" id="atext">Mechanical Engineering</option>
+									<option value="Civil Engineering" id="atext" >Civil Engineering</option>
+								</select>
+								<div class="error" id="department_error"></div>
+								<input type="password"  placeholder="Password" id="password" class = "password_text" name="password" autocomplete="off"/>
+								<div class="error" id="password_error"></div>
+								<input type="password"  placeholder="Password" id="confirm_password" class = "password_text" name="confirm_password" autocomplete="off"/>
+								<div class="error" id="confirm_password_error"></div>
+								<div class="remember">
+									<span class="checkbox1">
+										<label class="checkbox"><input type="checkbox" id="checkbox" name="checkbox"><i> </i>Remember me</label>
+									</span>
+									<div class="clear"> </div>
+								</div>
+								<input type="button" id="submit" onclick="signup_check()" value="Sign Up" name="submit">
+							</form>	
+							<div class="header-left-top">
+								<div class="sign-up"> <h2>or</h2> </div>
+								<input type="button" id="submit" value="Login" onclick="location.href='login_page.html';">
+							</div>
+						</div>			
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

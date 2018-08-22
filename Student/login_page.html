@@ -1,0 +1,61 @@
+
+<html>
+	<head>
+		<title>Login</title>
+		<script src="js/jquery.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="formvaliadator.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-main">
+				<h1>Moodle</h1>
+				<div class="header-bottom">
+					<div class="header-right w3agile">
+						<div class="header-left-bottom agileinfo">
+							<form id="form" name="form">
+								<input type="text"  placeholder="User name" id = "username_text" name="username" autocomplete="off"/>
+								<div class="error" id="username_error"></div>
+								<input type="password"  placeholder="Password"  id = "password_text" class = "password_text" name="password" autocomplete="off"/>
+								<div class="error" id="password_error"></div>
+								<div class="remember">
+									<span class="checkbox1">
+										<label class="checkbox"><input type="checkbox" id="checkbox" name="checkbox"><i> </i>Remember me</label>
+									</span>
+									<div class="forgot">
+										<input type="button" id="myBtn" class="remove" name="Submit" value="Forgot Password?" onclick="bt()">
+									</div>
+									<div class="clear"> </div>
+								</div>
+								<input type="button" id="submit" onclick="myFunction()" value="Login" name="submit">
+							</form>	
+							<div class="header-left-top">
+								<div class="sign-up"> <h2>or</h2> </div>
+								<input type="button" id="submit" value="Sign Up" onclick="location.href='signup_page.html';">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+																	
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+				<span class="close" onclick="closealert()">&times;</span>
+				<h2>Password Recovery</h2>
+				</div>
+				<div class="modal-body">
+					<input type="number"  placeholder="Enter OTP sent to your email" id = "username_text1" name="otp" autocomplete="off"/>
+					<div class="error" id="otp_error"></div>
+					<input type="password"  placeholder="Password"  id = "password_text1" name="password" autocomplete="off"/>
+					<div class="error" id="password_text1_error"></div>
+					<input type="password"  placeholder="Re-enter password"  id = "confirm_password_text1" name="confirm_password" autocomplete="off"/>
+					<div class="error" id="confirm_password_text1_error"></div>
+					<input type="submit" value="Submit" id="log" onclick="validate_otp()">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
